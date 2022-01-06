@@ -1,21 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Home Page</title>
-	<link rel="stylesheet" href="/css/app.css">
-</head>
-<body class="home">
+<html lang="en">
+<%- include('./partials/head.ejs', { title : 'Home'}) %> 
+<body>
+	<%- include('./partials/header.ejs') %> 
 	<h1>Home Page</h1>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="/login">login</a></li>
-			</ul>
-		</nav>
-	</header>
-
 	<img src="/images/node.jpg" width="60%">
+
+	<form action="/admin">
+		<label for="user">Ingrese a la vista admin con su usuario</label>
+		<input type="text" name="user" id="user">
+		<input type="submit" value="Cargar">
+	</form>
 </body>
 </html>
